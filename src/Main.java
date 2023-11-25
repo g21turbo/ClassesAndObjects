@@ -4,9 +4,12 @@ public class Main {
 
 
         Car car = new Car();
-//        car.make = "Porsche";
-//        car.model = " Carrera";
-//        car.color = "Red";
+        car.setMake("Ford");
+        car.setModel("Supra");
+        car.setDoors(2);
+        car.setConvertible(false);
+        car.setColor("Red");
+
         System.out.println("make = " + car.getMake());
         System.out.println("model = " + car.getModel());
         car.describeCar();

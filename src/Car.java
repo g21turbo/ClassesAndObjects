@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Car {
 
     private String make = "Tesla";
@@ -7,6 +9,14 @@ public class Car {
     private boolean convertible = true;
 
     public String getMake() {
+        if (make == null) make = "Unknown";
+        String lowercaseMake = make.toLowerCase();
+        switch (lowercaseMake){
+            case "toyota", "honda", "mazda" -> this.make = make;
+            default -> {
+                this.make = "Unsupported";
+            }
+        }
         return make;
     }
 
